@@ -32,7 +32,7 @@ computeSensitivityMap(X, y, C_val = 1, gamma_val = 0.0005, no_channels = 32, no_
 
 Example of a sensitivity map computed based on a SVM classifier separating animate/inanimate visual stimuli. The EEG signal was bandpass filtered to 1-25 Hz and downsampled to 100 Hz. Epochs of 600 ms (100 ms pre and 500 ms post stimulus onset) were extracted.
 
-### Other scripts in this repository 
+### Scripts in NPAIRS_CV folder
 - runSVMcrossvalidation.py: Script for SVM cross-validation (hyperparameters: C and gamma) in a leave-one-subject-out approach. Runs from the command-line with the subject number as the cmd flag. Data has to be loaded in the Python script.
 - NPAIRS_main.py: Implementation of the NPAIRS [(Strother et al., 2011)](https://www.sciencedirect.com/science/article/pii/S1053811901910341?via%3Dihub) cross-validation framework for estimation of sensitivity map visualization uncertainty. 
 - NPAIRS_functions.py: Functions called in NPAIRS_main.py.
@@ -47,15 +47,4 @@ If you find this implementation useful, please cite: [Single Trial Decoding of S
   year={2018}
 }
 
-*In collaboration with Lars Kai Hansen and Sofie T. Hansen, Technical University of Denmark, 2018*
-
-
-
-
-
-
-
-
-
-Code for analyzing EEG, implementation and optimization of Support Vector Machines (SVM), computation of EEG-based sensitivity mapping
-
+*In collaboration with Professor Lars Kai Hansen and Dr. Sofie T. Hansen, Technical University of Denmark, 2018*
