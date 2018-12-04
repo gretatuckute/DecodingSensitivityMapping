@@ -13,14 +13,14 @@ The sensitivity map is computed as the derivative of the Radial Basis Function (
 The sript,*computeSensitivityMap* fits a SVM classifier based on the given data matrix and label array, and computes the corresponding sensitivity map.
 
 ### Inputs ###
-# X: EEG data 2d matrix containing trials as rows, and features (channels * time points) as columns.
-# y: List/NumPy array containing binary class labels, y = {-1, 1}.
-# C: SVM classifier regularization parameter. 
-# Gamma: Free parameter of the RBF kernel, SVM classifier.
+- X: EEG data 2d matrix containing trials as rows, and features (channels * time points) as columns.
+- y: List/NumPy array containing binary class labels, y = {-1, 1}.
+- C: SVM classifier regularization parameter. 
+- Gamma: Free parameter of the RBF kernel, SVM classifier.
 
 ### Outputs ###
-# s_matrix: sensitivity map matrix.
-# plt: Visualization of the sensitivity map.
+- s_matrix: sensitivity map matrix.
+- plt: Visualization of the sensitivity map.
 
 ### Example function call ### 
 computeSensitivityMap(X, y, C_val = 1, gamma_val = 0.0005, no_channels = 32, no_timepoints = 60)
