@@ -8,7 +8,7 @@ The sensitivity map is computed as the derivative of the Radial Basis Function (
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;\alpha^{\top}\mathbf{k_x}}{\partial&space;x_j}&space;=&space;\sum_n&space;\alpha_n&space;2&space;\gamma&space;(x_{n,j}-x_j)&space;\exp(-\gamma\left\lVert\mathbf{x_\mathbf{n}}-\mathbf{x}\right\rVert^2)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;\alpha^{\top}\mathbf{k_x}}{\partial&space;x_j}&space;=&space;\sum_n&space;\alpha_n&space;2&space;\gamma&space;(x_{n,j}-x_j)&space;\exp(-\gamma\left\lVert\mathbf{x_\mathbf{n}}-\mathbf{x}\right\rVert^2)" title="\frac{\partial \alpha^{\top}\mathbf{k_x}}{\partial x_j} = \sum_n \alpha_n 2 \gamma (x_{n,j}-x_j) \exp(-\gamma\left\lVert\mathbf{x_\mathbf{n}}-\mathbf{x}\right\rVert^2)" /></a>
 
-The Python toolbox [Scikit-learn](https://scikit-learn.org/stable/) was used to implement SVM models.
+The Python toolbox [Scikit-learn](https://scikit-learn.org/stable/) is used to implement SVM models.
 
 ### Script information 
 
