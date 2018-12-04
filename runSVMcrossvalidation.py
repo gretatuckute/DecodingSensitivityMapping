@@ -7,6 +7,8 @@ Runs from the command line.
 #  EXAMPLE FUNCTION CALL
 #	python runSVM.py -s 0
 
+Saves cross-validation training and test accuracies in an excel file.
+
 @author: Greta Tuckute, grtu@dtu.dk, November 2018
 
 """
@@ -34,7 +36,7 @@ subj = int(subj)
 no_trials = 690 # Number of trials for each subject
 
 # Load data
-ASR = sio.loadmat('ASRinterp')
+ASR = sio.loadmat('X')
 X = ASR['EV_Z']
 
 y = ASR['Animate']
