@@ -64,16 +64,19 @@ def computeSensitivityMap(X, y, C_val, gamma_val, no_channels, no_timepoints):
     # np.save('sensitivity_map.npy',s_matrix)
     
     ### Generation of sensitivity map plot ###
-    channel_vector = ['P7','P4','Cz','Pz','P3','P8','O1','O2','T8','F8','C4','F4',
-                  'Fp2','Fz','C3','F3','Fp1','T7','F7','Oz','PO3','AF3','FC5',
-                  'FC1','CP5','CP1','CP2','CP6','AF4','FC2','FC6','PO4']
-
-    time_vector = ['-100','0','100','200','300','400','500']
+    
+    # Examples of x- and y-axis labels
+    
+#    channel_vector = ['P7','P4','Cz','Pz','P3','P8','O1','O2','T8','F8','C4','F4',
+#                  'Fp2','Fz','C3','F3','Fp1','T7','F7','Oz','PO3','AF3','FC5',
+#                  'FC1','CP5','CP1','CP2','CP6','AF4','FC2','FC6','PO4']
+#
+#    time_vector = ['-100','0','100','200','300','400','500']
 
     plt.matshow(s_matrix)
     plt.xlabel('Time points')
-    plt.xticks(np.arange(0,no_timepoints,10),time_vector)
-    plt.yticks(np.arange(no_channels),channel_vector)
+    #plt.xticks(np.arange(0,no_timepoints,10),time_vector)
+    #plt.yticks(np.arange(no_channels),channel_vector)
     plt.ylabel('EEG channels')
     plt.colorbar()
     plt.title('Sensitivity map SVM RBF kernel')
