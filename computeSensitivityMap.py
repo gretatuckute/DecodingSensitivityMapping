@@ -9,20 +9,21 @@ import scipy.io as sio
 
 def computeSensitivityMap(X, y, C_val, gamma_val, no_channels, no_timepoints):
     """
-    Function for computing a sensitivity map for an EEG-based Radial Basis Function (RBF) Support Vector Machine (SVM) classifier.
-    Classifier 
-        
+    Function for computing a sensitivity map for an EEG-based Radial Basis Function (RBF) Support Vector Machine (SVM) classifier.       
         
     ### Inputs ###
     # X: EEG data 2d matrix containing trials as rows, and features (channels * time points) as columns.
     # y: List/NumPy array containing binary class labels, y = {-1, 1}.
-    # C
-    # Gamma 
+    # C: SVM classifier regularization parameter. 
+    # Gamma: Free parameter of the RBF kernel, SVM classifier.
     
     
-    # Output
+    ### Outputs ###
+    # s_matrix: sensitivity map matrix.
+    # plt: Visualization of the sensitivity map.
     
-    # Example function call 
+    ### Example function call ###
+    computeSensitivityMap(X, y, C_val = 1, gamma_val = 0.0005, no_channels = 32, no_timepoints = 60)
 
     """
     
@@ -60,7 +61,7 @@ def computeSensitivityMap(X, y, C_val, gamma_val, no_channels, no_timepoints):
     s = np.sum(np.square(mapping),axis=1)/np.size(alpha) 
 
     s_matrix = np.reshape(s,[no_channels,no_timepoints])
-    # np.save('s_map_mean_NEW.npy',s_res)
+    # np.save('sensitivity_map.npy',s_matrix)
     
     ### Generation of sensitivity map plot ###
     channel_vector = ['P7','P4','Cz','Pz','P3','P8','O1','O2','T8','F8','C4','F4',
@@ -78,6 +79,6 @@ def computeSensitivityMap(X, y, C_val, gamma_val, no_channels, no_timepoints):
     plt.title('Sensitivity map SVM RBF kernel')
     # plt.show()
     
-    return plt, s_matrix
+    return s_matrix, plt
     
     print('Sensitivity map computed. Number of support vectors for the classifier: {0}.'.format(len(support_array)))
