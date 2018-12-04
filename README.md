@@ -1,4 +1,4 @@
-# SVM-decoding-and-sensitivity-mapping
+### SVM decoding and sensitivity mapping
 
 Toolbox for computing and visualizing sensitivity maps of EEG-based Support Vector Machines (SVM) based on an approach originally proposed by [Rasmussen et al., 2011](https://www.sciencedirect.com/science/article/pii/S1053811910016198). More information found in [Single Trial Decoding of Scalp EEG Under Naturalistic Stimuli](https://www.biorxiv.org/content/early/2018/11/29/481630). The SVM classifier uses the Radial Basis Function (RBF):
 
@@ -8,30 +8,31 @@ The sensitivity map is computed as the derivative of the Radial Basis Function (
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\frac{\partial&space;\alpha^{\top}\mathbf{k_x}}{\partial&space;x_j}&space;=&space;\sum_n&space;\alpha_n&space;2&space;\gamma&space;(x_{n,j}-x_j)&space;\exp(-\gamma\left\lVert\mathbf{x_\mathbf{n}}-\mathbf{x}\right\rVert^2)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;\alpha^{\top}\mathbf{k_x}}{\partial&space;x_j}&space;=&space;\sum_n&space;\alpha_n&space;2&space;\gamma&space;(x_{n,j}-x_j)&space;\exp(-\gamma\left\lVert\mathbf{x_\mathbf{n}}-\mathbf{x}\right\rVert^2)" title="\frac{\partial \alpha^{\top}\mathbf{k_x}}{\partial x_j} = \sum_n \alpha_n 2 \gamma (x_{n,j}-x_j) \exp(-\gamma\left\lVert\mathbf{x_\mathbf{n}}-\mathbf{x}\right\rVert^2)" /></a>
 
-#### Script information 
+The Python toolbox [Scikit-learn](https://scikit-learn.org/stable/) was used to implement SVM models.
 
-The sript,*computeSensitivityMap* fits a SVM classifier based on the given data matrix and label array, and computes the corresponding sensitivity map.
+### Script information 
 
-### Inputs ###
+The script, *computeSensitivityMap.py* fits a SVM classifier based on the input data matrix and label array, and computes the corresponding sensitivity map. 
+
+#### Inputs 
 - X: EEG data 2d matrix containing trials as rows, and features (channels * time points) as columns.
 - y: List/NumPy array containing binary class labels, y = {-1, 1}.
 - C: SVM classifier regularization parameter. 
 - Gamma: Free parameter of the RBF kernel, SVM classifier.
 
-### Outputs ###
+#### Outputs
 - s_matrix: sensitivity map matrix.
 - plt: Visualization of the sensitivity map.
 
-### Example function call ### 
+#### Example function call
 computeSensitivityMap(X, y, C_val = 1, gamma_val = 0.0005, no_channels = 32, no_timepoints = 60)
 
-### Example output 
-
+#### Example output 
 ![alt text](https://raw.githubusercontent.com/gretatuckute/DecodingSensitivityMapping/master/Example/sensitivity_map.png)
 
+Example of a sensitivity map computed based on a SVM classifier separating animate/inanimate visual stimuli. The EEG signal was bandpass filtered to 1-25 Hz and downsampled to 100 Hz. Epochs of 600 ms (100 ms pre and 500 ms post stimulus onset) were extracted.
 
-The Python toolbox [Scikit-learn](https://scikit-learn.org/stable/) was used to implement SVM models.
-
+### Reference
 If you find this implementation useful, please cite: [Single Trial Decoding of Scalp EEG Under Naturalistic Stimuli](https://www.biorxiv.org/content/early/2018/11/29/481630)
 
 @article{Tuckute2018,
