@@ -1,6 +1,6 @@
 ### SVM decoding and sensitivity mapping
 
-Toolbox for computing and visualizing sensitivity maps of EEG-based Support Vector Machines (SVM) based on an approach originally proposed by [Rasmussen et al., 2011](https://www.sciencedirect.com/science/article/pii/S1053811910016198). More information found in [Single Trial Decoding of Scalp EEG Under Naturalistic Stimuli](https://www.biorxiv.org/content/early/2018/11/29/481630). The SVM classifier uses the Radial Basis Function (RBF) kernel:
+Toolbox for computing and visualizing sensitivity maps of EEG-based Support Vector Machines (SVM) based on an approach originally proposed by [Rasmussen et al., 2011](https://www.sciencedirect.com/science/article/pii/S1053811910016198). More information found in [Single Trial Decoding of Scalp EEG Under Naturalistic Stimuli](https://www.hindawi.com/journals/cin/2019/9210785/). The SVM classifier uses the Radial Basis Function (RBF) kernel:
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=k(\mathbf{x}_n,\mathbf{x})&space;=&space;\exp{(-\gamma||\mathbf{x}_n-\mathbf{x}||^2)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?k(\mathbf{x}_n,\mathbf{x})&space;=&space;\exp{(-\gamma||\mathbf{x}_n-\mathbf{x}||^2)}" title="k(\mathbf{x}_n,\mathbf{x}) = \exp{(-\gamma||\mathbf{x}_n-\mathbf{x}||^2)}" /></a>
 
@@ -38,13 +38,14 @@ Example of a sensitivity map computed based on a SVM classifier separating anima
 - NPAIRS_functions.py: Functions called in NPAIRS_main.py.
 
 ### Reference
-If you find this implementation useful, please cite: [Single Trial Decoding of Scalp EEG Under Naturalistic Stimuli](https://www.biorxiv.org/content/early/2018/11/29/481630)
+If you find this implementation useful, please cite: [Single Trial Decoding of Scalp EEG Under Naturalistic Stimuli](https://www.hindawi.com/journals/cin/2019/9210785/)
 
-@article{Tuckute2018,
-  title={Single Trial Decoding of Scalp EEG Under Naturalistic Stimuli},
-  author={Tuckute, Greta and Hansen, Sofie Therese and Pedersen, Nicolai and Steenstrup, Dea and Hansen, Lars Kai},
-  journal={arXiv preprint arXiv:10.1101/481630},
-  year={2018}
+@article{Tuckute2019,
+author = {Tuckute, Greta and Hansen, Sofie Therese and Pedersen, Nicolai and Steenstrup, Dea and Hansen, Lars Kai},
+file = {:C$\backslash$:/Users/Greta/Desktop/article{\_}decoding/Tuckute 2019 Single-Trial Decoding of Scalp EEG under Natural Conditions.pdf:pdf},
+title = {{Single-Trial Decoding of Scalp EEG under Natural Conditions}},
+volume = {2019},
+year = {2019}
 }
 
 *In collaboration with Professor Lars Kai Hansen and Dr. Sofie T. Hansen, Technical University of Denmark, 2018*
