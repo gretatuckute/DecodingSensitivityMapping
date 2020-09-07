@@ -39,13 +39,14 @@ Example of a sensitivity map computed based on a SVM classifier separating anima
 
 ### Reference
 If you find this implementation useful, please cite: [Single Trial Decoding of Scalp EEG Under Naturalistic Stimuli](https://www.hindawi.com/journals/cin/2019/9210785/)
-
-@article{Tuckute2019,
-author = {Tuckute, Greta and Hansen, Sofie Therese and Pedersen, Nicolai and Steenstrup, Dea and Hansen, Lars Kai},
-file = {:C$\backslash$:/Users/Greta/Desktop/article{\_}decoding/Tuckute 2019 Single-Trial Decoding of Scalp EEG under Natural Conditions.pdf:pdf},
-title = {{Single-Trial Decoding of Scalp EEG under Natural Conditions}},
-volume = {2019},
-year = {2019}
+```
+@article{tuckute2019single,
+  title={Single-Trial Decoding of Scalp EEG under Natural Conditions},
+  author={Tuckute, Greta and Hansen, Sofie Therese and Pedersen, Nicolai and Steenstrup, Dea and Hansen, Lars Kai},
+  journal={Computational intelligence and neuroscience},
+  volume={2019},
+  year={2019},
+  publisher={Hindawi}
 }
-
+```
 *In collaboration with Professor Lars Kai Hansen and Dr. Sofie T. Hansen, Technical University of Denmark, 2018*
